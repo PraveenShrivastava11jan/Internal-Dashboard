@@ -1,0 +1,90 @@
+ol.progtrckr {
+    margin: 0;
+    padding: 0;
+    list-style-type none;
+}
+
+ol.progtrckr li {
+    display: inline-block;
+    text-align: center;
+    line-height: 3.5em;
+}
+
+ol.progtrckr[data-progtrckr-steps="2"] li { width: 49%; }
+ol.progtrckr[data-progtrckr-steps="3"] li { width: 33%; }
+ol.progtrckr[data-progtrckr-steps="4"] li { width: 24%; }
+ol.progtrckr[data-progtrckr-steps="5"] li { width: 19%; }
+ol.progtrckr[data-progtrckr-steps="6"] li { width: 16%; }
+ol.progtrckr[data-progtrckr-steps="7"] li { width: 14%; }
+ol.progtrckr[data-progtrckr-steps="8"] li { width: 12%; }
+ol.progtrckr[data-progtrckr-steps="9"] li { width: 11%; }
+
+ol.progtrckr li.progtrckr-done {
+    color: black;
+    border-bottom: 4px solid #c6076f;
+}
+ol.progtrckr li.progtrckr-todo {
+    color: #393836; 
+    border-bottom: 4px solid #393836;
+}
+
+ol.progtrckr li:after {
+    content: "\00a0\00a0";
+}
+ol.progtrckr li:before {
+    position: relative;
+    bottom: -2.5em;
+    float: left;
+    left: 50%;
+    line-height: 1em;
+}
+ol.progtrckr li.progtrckr-done:before {
+    content: "\2713";
+    color: white;
+    background-color: #c6076f;
+    height: 2.2em;
+    width: 2.2em;
+    line-height: 2.2em;
+    border: none;
+    border-radius: 2.2em;
+}
+ol.progtrckr li.progtrckr-todo:before {
+    content: "\039F";
+    color: #393836;
+    background-color: white;
+    font-size: 2.2em;
+    bottom: -1.2em;
+}
+
+
+.visible{
+    display: none
+}
+
+.btn-success {
+    color: #fff;
+    background-color: #c6076f;
+    border-color: #c6076f;
+}
+
+.btn-success.disabled, .btn-success:disabled {
+    background-color: #c6076f;
+    border-color: #c6076f;
+}
+
+.btn-success:hover {
+    color: #fff;
+    background-color: #c6076f;
+    border-color: #c6076f;
+}
+
+.btn-success:not([disabled]):not(.disabled).active, .btn-success:not([disabled]):not(.disabled):active, .show>.btn-success.dropdown-toggle {
+    color: #fff;
+    background-color: #c6076f;
+    border-color: #c6076f;
+    box-shadow: 0 0 0 0.2rem rgba(198,7,111,.1);
+}
+
+.dataTables_scrollHead, .dataTables_scrollHeadInner, .dataTables_scrollFootInner, .table.dataTable{
+    width: 100% !important;
+}
